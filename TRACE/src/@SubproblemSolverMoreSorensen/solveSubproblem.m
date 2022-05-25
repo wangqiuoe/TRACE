@@ -146,7 +146,7 @@ while 1
     quantities.setSubproblemError(S.optimalityError(quantities));
     return;
   end
-  if (errChol == 0 && step_norm <= quantities.trustRegionRadius && alpha^2*uHu <= tolerance_*(quantities.subproblemStep'*(quantities.subproblemMatrix*quantities.subproblemStep) + quantities.subproblemMultiplier*step_norm^2 + quantities.subproblemMultiplier*quantities.trustRegionRadius^2))
+  if (errChol == 0 && step_norm <= quantities.trustRegionRadius && alpha^2*uHu <= S.tolerance_*(quantities.subproblemStep'*(quantities.subproblemMatrix*quantities.subproblemStep) + quantities.subproblemMultiplier*step_norm^2 + quantities.subproblemMultiplier*quantities.trustRegionRadius^2))
     quantities.setSubproblemStep(quantities.subproblemStep + alpha*eig_vec);
     quantities.setSubproblemStatus(2);
     quantities.setSubproblemError(S.optimalityError(quantities));
