@@ -26,7 +26,7 @@ cd(sprintf('%s/%s',cutest_problem_path,cutest_problem_name));
 
 % Declare algorithm
 T = TRACE;
-T.options.modifyOption(T.reporter, 'tolerance', 1e-4);
+%T.options.modifyOption(T.reporter, 'tolerance', 1e-4);
 % Declare problem
 P = ProblemCUTEst;
 
