@@ -35,11 +35,8 @@ classdef (Abstract) SubproblemSolver < Strategy
     % Initialize
     initialize(S,options,quantities,reporter)
     
-    % Solve trust region subproblem
+    % Solve subproblem
     solveSubproblem(S,options,quantities,reporter,strategies)
-    
-    % Solve arc subproblem
-    solveARCSubproblem(S,options,quantities,reporter,strategies)
     
   end % methods (abstract)
   

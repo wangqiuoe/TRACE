@@ -79,12 +79,9 @@ classdef SubproblemSolverMoreSorensen < SubproblemSolver
     % Minimum eigenpair
     err = optimalityError(S,quantities)
     
-    % Solve trust region subproblem
+    % Solve subproblem
     solveSubproblem(S,options,quantities,reporter,strategies)
 
-    % Solve arc subproblem
-    solveARCSubproblem(S,options,quantities,reporter,strategies)
-    
   end % methods (public access)
   
 end % SubproblemSolverMoreSorensen
